@@ -80,7 +80,7 @@ namespace ClientManager.Parser
             {
                 while (i > -1)
                 {
-                    xmls = trimmError2(trimmError1(xmls));
+                    xmls = trimmErrorDescendant(trimmErrorParent(xmls));
                     string xmlx = searchIsland(xmls, searchTags(xmls));
                     if (xmlx == "delete")
                     {
@@ -105,7 +105,7 @@ namespace ClientManager.Parser
         }
 
         //check position of illegal characters and remove it - < or > including catering for tags not closed correctly. Parent tags
-        private static string trimmError1(string aString)
+        private static string trimmErrorParent(string aString)
         {
             try
             {
@@ -127,7 +127,7 @@ namespace ClientManager.Parser
         }
 
         //check position of illegal characters and remove it - < or > including catering for tags not closed correctly. Descendants where applicable
-        private static string trimmError2(string aString)
+        private static string trimmErrorDescendant(string aString)
         {
             try
             {
