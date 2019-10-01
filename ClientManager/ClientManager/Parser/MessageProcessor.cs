@@ -1,4 +1,4 @@
-﻿/* MessageProcessor - responsible for processing and validation of incoming message
+/* MessageProcessor - responsible for processing and validation of incoming message
  * Extracts XML islands and markup XML information - creates XML document
  */
 using ClientManager.Models;
@@ -80,6 +80,7 @@ namespace ClientManager.Parser
             {
                 while (i > -1)
                 {
+                    xmls = trimmError2(trimmError1(xmls));
                     string xmlx = searchIsland(xmls, searchTags(xmls));
                     if (xmlx == "delete")
                     {
@@ -96,6 +97,50 @@ namespace ClientManager.Parser
 
                 xmlObject = xmlObject + "</root>";
                 return XElement.Parse(@xmlObject);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        //check position of illegal characters and remove it - < or > including catering for tags not closed correctly. Parent tags
+        private static string trimmError1(string aString)
+        {
+            try
+            {
+                string original = aString;
+                int first = aString.IndexOf("<", StringComparison.Ordinal);
+                int second = aString.IndexOf(">", StringComparison.Ordinal);
+                aString = aString.Remove(aString.IndexOf("<"), 1);
+                int third = aString.IndexOf("<", StringComparison.Ordinal);
+                if (third < second)
+                {
+                    return aString;
+                }
+                return original;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        //check position of illegal characters and remove it - < or > including catering for tags not closed correctly. Descendants where applicable
+        private static string trimmError2(string aString)
+        {
+            try
+            {
+                string original = aString;
+                int first = aString.IndexOf("<", StringComparison.Ordinal);
+                int second = aString.IndexOf(">", StringComparison.Ordinal);
+
+                if (second < first)
+                {
+                    aString = aString.Remove(aString.IndexOf(">"), 1);
+                    return aString;
+                }
+                return original;
             }
             catch (Exception)
             {
