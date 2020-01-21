@@ -80,7 +80,7 @@ Please remember that without the required AWS parameters, this will not work. Th
 chmod 755 build.sh destroy.sh
 ```  
   
-**BUILD NOTES:** Script files must be run from the project root directory
+**BUILD NOTES:** Script files must be run from the project root directory. Once successfully tested **PLEASE TEAR DOWN ENVIRONMENT** to prevent costs.
   
   
 
