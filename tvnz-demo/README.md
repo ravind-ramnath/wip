@@ -36,7 +36,8 @@ Once the the AWS Terraform configuration has been complete, the build can be ini
 This will run a set of commands that will build the JAVA lambda function, deploy the infrastructure (RDS, ECS, ELB's, SG's, NAT GW, API Gateway, Lambda Function, JAVA components)  
   
 The build consists of the following commands encapsulated in build.sh  
-```mvn clean  
+```
+mvn clean  
 mvn package  
 cd aws-terraform  
 terraform init  
@@ -45,7 +46,8 @@ terraform apply "tvnz"
 ``` 
   
 Once completed successfully, the console output will consist of the following:  
-```DB Endpoint  
+```
+DB Endpoint  
 ECS Cluster  
 Bastion Public IP  
 Private IP GW  
