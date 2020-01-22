@@ -63,7 +63,7 @@ Wordpress Create Post API Service Enpoint - This will allow you to create a post
 ### Testing  
 After a successfull deployment, you can access the Wordpress site by navigating to the **WordPress Public Endpoint** that is available from the output eg. **``wordpress-2084892677.us-east-1.elb.amazonaws.com``**  Please wait a few minutes after the build to allow for the containers to start up and the ELB health checks to be active. An HTTP 503 will be thrown if the containers are not up and running. Please try again if you do experience a 503.    
   
-You will be presented with the final configuration of Wordpress which requires the Language setting and admin user. Please refer to the above **Defaults for Demo.** Once you have completed this configuration, you can now access Wordpress. To test the Lambda functions that are exposed via APE Gateway, you will need the Service endpoint that was rendered in the output eg. **``https://jfnfcy2432.execute-api.us-east-1.amazonaws.com/tvnz/createPost``**  
+You will be presented with the final configuration of Wordpress which requires the Language setting and admin user. Please refer to the above **Defaults for Demo.** Once you have completed this configuration, you can now access Wordpress. To test the Lambda functions that are exposed via API Gateway, you will need the Service endpoint that was rendered in the output eg. **``https://jfnfcy2432.execute-api.us-east-1.amazonaws.com/tvnz/createPost``**  
   
 You can test this using the below cURL command:  
   
