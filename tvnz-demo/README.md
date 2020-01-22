@@ -1,4 +1,6 @@
-# AWS - Provision MySQL RDS and ECS with Wordpress using Terraform
+# AWS - Provision MySQL RDS and ECS with Wordpress using Terraform  
+  
+This demo provisions an ECS cluster with Wordpress containers behind an ELB with a MySQL RDS instance backend. There are private and public subnets with a Bastion host for server management. A public ELB is provisioned for public site access. There is a Lambda function backed by JAVA that allows for Wordpress posts to be created via the API. This API is exposed via API Gateway. The entire process is automated using a single script that encapsulates multiple Terraform and Maven scripts. You would need a valid AWS account to test.
 
 ## Requirements
 ### Versions
