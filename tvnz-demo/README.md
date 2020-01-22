@@ -50,15 +50,15 @@ terraform apply "tvnz"
   
 Once completed successfully, the console output will consist of the following:  
 ```
-DB Endpoint  
-ECS Cluster  
-Bastion Public IP  
-Private IP GW  
-Public IP GW  
-Bastion SSH Private Key (Demo purposes only)  
-ECS SSH Private Key (Demo purposes only)  
-WordPress Public Endpoint - this is where you will access Wordpress. This parameter will also be required for the API Gateway service call (important to note)  
-Wordpress Create Post API Service Enpoint - This will allow you to create a post via cURL or Postman 
+1. DB Endpoint  
+2. ECS Cluster  
+3. astion Public IP  
+4. Private IP GW  
+5. Public IP GW  
+6. Bastion SSH Private Key (Demo purposes only)  
+7. ECS SSH Private Key (Demo purposes only)  
+8. WordPress Public Endpoint - this is where you will access Wordpress. This parameter will also be required for the API Gateway service call (important to note)  
+9. Wordpress Create Post API Service Enpoint - This will allow you to create a post via cURL or Postman 
 ```  
   
 ### Testing  
