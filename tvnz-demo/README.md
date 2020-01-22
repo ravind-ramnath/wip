@@ -73,9 +73,10 @@ You can test this using the below cURL command:
 ```  
 curl -H "Content-Type: application/json" -X POST [SERVICE ENDPOINT] -d '{"title":"Your title here","content":"Your content here", "url":"[WORDPRESS ENDPOINT]"}'  
 ```  
-
 Success message: **"Post processed successfully for : TITLE + CONTENT + WORDPRESS-SITE**  
 Error Message: **Post process has failed : {Error Message}**
+  
+To view the new article post, logout of the admin console and got to the root of the site on the browser - this would be the logged out site, the **WordPress Public Endpoint** that is available from the output eg. **``wordpress-2084892677.us-east-1.elb.amazonaws.com``** 
   
 You will find the parameters required to run this as mentioned above. The service does not perform any validation as this is for demo purposes only. Only positive testing applies. Once this cURL has run successfully, you can log into Wordpress using the user that was created (admin) and view the posts.  
   
