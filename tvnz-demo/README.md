@@ -31,7 +31,9 @@ All java code resides in the **src** folder. Simple function to get the Lambda c
 ### Build the application
 Once the the AWS Terraform configuration has been complete, the build can be initiated. You would need to be in the root folder of the application. Run the following command:  
   
-**./build.sh**  
+```
+./build.sh
+```
   
 This will run a set of commands that will build the JAVA lambda function, deploy the infrastructure (RDS, ECS, ELB's, SG's, NAT GW, API Gateway, Lambda Function, JAVA components)  
   
