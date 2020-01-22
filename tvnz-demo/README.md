@@ -3,7 +3,8 @@
 ## Requirements
 ### Versions
 Terraform - v0.11.11  
-Maven - 3.5.4
+Maven - 3.5.4  
+JDK 1.8.0_231
   
   
   
